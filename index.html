@@ -17,14 +17,15 @@
   <body>
 
     <header>
-        <nav class="navbar navbar-default" role="navigation">
+        <nav class="navbar navbar-dark bg-primary" role="navigation">
             <div class="container-fluid">
               <div class="navbar-header">
-                <a class="navbar-left" href="#"><img class="rise_logo" src="assets/logo.png"</a>
+                <a class="navbar-brand" href="#"></a><img class="navbar-brand rise_logo" src="assets/logo.png">
+                <p class="navbar-brand nav-title">Implementations</p>
               </div>
               <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                  <li ><a href="#">Dashboard</a></li>
+                  <li><a href="#">Dashboard</a></li>
                   <li><a href="#">Projects</a></li>
                   <li><a href="#">Specialists</a></li>
                 </ul>
@@ -35,11 +36,11 @@
 
   </body>
   <main ng-view>
-      <!-- <div id="gantt_panel" class="panel panel-default"> -->
+      <div id="gantt_panel" class="panel panel-default">
         <div class="container-fluid">
-        <div id="chart_div" class="panel-body"></div>
-        <div class="panel-footer">Last Updated: 7/1/2018 @ 6:00 AM</div>
-      <!-- </div> -->
+          <div id="chart_div" class="panel-body"></div>
+          <div class="panel-footer">Last Updated: 7/1/2018 @ 6:00 AM</div>
+      </div>
     </div>
   </main>
 
