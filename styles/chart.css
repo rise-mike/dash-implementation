@@ -1,0 +1,24 @@
+#gantt_panel {
+  /* background: salmon;
+  border: black 2px solid; */
+}
+#chart_div { 
+  border: none;
+}
+
+.panel-footer {
+  text-align: center;
+}
+.navbar {
+background-color: #3285ED;
+text-decoration-color: white;
+}
+
+.navbar-brand {
+ text-decoration-color: white;
+}
+
+/* .rise_logo {
+  height: 40px;
+  width: 120px;
+} */
