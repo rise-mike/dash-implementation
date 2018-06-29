@@ -3,7 +3,7 @@ import json
 
 config = {
     "domain": "https://projectsapi.zoho.com/restapi/portal/risepeople/projects/",
-    "auth": "hahahahahaha",
+    "auth": "?authtoken=a62f7e0580c4233f34740979bd234442",
     "params": "test"
 }
 
@@ -22,29 +22,30 @@ def parseAllProjects(rawProjects):
     # Takes in a dict of "rawProjects" from Zoho Projects, returns a dict of parsed projects 
     allParsedProjects = {}
     for aProject in rawProjects:
-      currentProjectName = (aProject["name"])
-      allParsedProjects[currentProjectName] : singleProjectBuilder(aProject)
-    #   print(singleProjectBuilder(aProject))
-    print(allParsedProjects)
-    return allParsedProjects
+        currentProjectName = (aProject["name"])
+        allParsedProjects[currentProjectName] : singleProjectBuilder(aProject)
+        print("IN THE FOR LOOP:", singleProjectBuilder(aProject))
+        print("Parsed, in loop ", allParsedProjects)
+
+    print("All Parsed Projies: ", allParsedProjects)
     
 
 def singleProjectBuilder(rawProject):
     # Takes a single "rawProject" Zoho Project JSON object, returns a parsed object, "parsedProject"
     parsedProject = {
         rawProject["name"] : {
-            "projId": rawProject["id"],
+            "projectId": rawProject["id"],
             "owner": rawProject["owner_name"],
             "startDate": rawProject["start_date"],
             # "goLive": rawProject["custom_fields"][5]["Expected go-live date"],
-            "tasks": {
-                "open": rawProject["task_count"]["open"],
-                "closed": rawProject["task_count"]["closed"],
-            },
+            "tasks_open": rawProject["task_count"]["open"],
+            "tasks_closed": rawProject["task_count"]["closed"],
             "status": rawProject["status"],
         }
     }
     return parsedProject
+
+
 
 
 allProjects = fetchAllProjects(config)
