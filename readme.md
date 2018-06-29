@@ -16,4 +16,4 @@ This is a small app to display current implementations in progress in a Gantt ch
     - Colouring - change based on overdue status of project
     - Background row colours, replace with clear lines.
 3. Data
-    - Test extract from Projects, write transformation functions
+    - Test extract from Projects, write transformation 
