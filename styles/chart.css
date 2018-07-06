@@ -2,13 +2,27 @@
 background-color: #3285ED;
 font-family: 'Roboto', sans-serif;
 }
+.panel-default{
+  vertical-align: center;
+}
 
 .nav-title{
   font-size: 20px
 }
+.panel-text{
+  margin-top: 18px;
+}
 .progress{
-  margin-top: 20px;
-  width: 32.5%
+  margin-top: 18px;
+  width: 32.5%;
+  padding: 0;
+}
+.rise-logo{
+  height: 70px;
+}
+.nav-title{
+  font-size: 35px;
+  margin-top: 13px;
 }
 
 .panel{
@@ -16,14 +30,13 @@ font-family: 'Roboto', sans-serif;
   padding: 0;
   font-family: 'Roboto', sans-serif;
 }
-.h4{
-  margin-top: -9px;
+.proj_title{
+padding: 9px 0px;
 }
 .panel-body{
-  padding-left:10px;
-  padding-right: 10px;
-  padding-top: 0;
-  padding-bottom: 0;
+  height: auto;
+  margin: 0;
+  padding: 0;
   white-space: nowrap;
 }
 
@@ -33,4 +46,13 @@ font-family: 'Roboto', sans-serif;
 
 .panel-footer {
   text-align: center;
+}
+.owner{
+  border: 1px solid black;
+  border-radius: 12px;
+  width: auto;
+  display: inline-block;
+  padding: 5px;
+  font-size: 15px;
+  margin-top: 12px;
 }

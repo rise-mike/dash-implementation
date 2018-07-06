@@ -1,6 +1,11 @@
+// const requirejs = require('require.js')
+
+const chartData = require('list.js')
 
 google.charts.load('current', {'packages':['gantt']});
 google.charts.setOnLoadCallback(drawChart);
+
+console.log("CHART! Woo :  ", chartData)
 
 function drawChart() {
 
