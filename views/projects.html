@@ -1,0 +1,35 @@
+<!-- <div id="project-list" class="panel panel-default">
+  <div class="container-fluid">
+    <div ng-repeat="project in projects">
+      <div class="row">
+        <div class="col-md-12">
+          <h3 class="panel-title">{{ project.name }}</h3>
+            <div class="panel panel-default">
+          </div>
+        </div>
+    </div>
+  </div>
+<div class="panel-footer">Last Updated: 7/1/2018 @ 6:00 AM</div> -->
+
+<div class="container-fluid">
+  <div class="panel panel-default" ng-repeat="project in projects | orderBy:'-progress_val'">
+    
+      <div class="panel-body row ">
+        <div class="col-sm-8">
+          <h4><strong>{{ project.name }}</strong> - {{ project.owner }}</h4> 
+          <strong>Start Date: </strong> {{ project.startDate}}
+          <strong>Go-Live: </strong> {{ project.custom.go_live }}
+        </div>
+        <div class="progress col-sm">
+            <div class="progress-bar" role="progressbar" 
+            ng-style="{'width': getWidth(project)}"
+            aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">{{ project.progress }}%</div>
+        </div>
+      </div>
+    
+    </div>
+  </div>
+
+
+  <!-- [ngStyle]="{'width': project.progress}" -->
+  
