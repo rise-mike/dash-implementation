@@ -19,6 +19,7 @@ def parseAllProjects(rawProjects):
     
 def singleProjectBuilder(rawProject):
     # Takes a single "rawProject" Zoho Project JSON object, returns a parsed object, "parsedProject"
+    projProgress = progresCalc(rawProject["task_count"]["open"], rawProject["task_count"]["closed"])
     parsedProject = {
             "name": rawProject["name"],  
             "projectId": rawProject["id"],
@@ -28,8 +29,8 @@ def singleProjectBuilder(rawProject):
             "tasks_open": rawProject["task_count"]["open"],
             "tasks_closed": rawProject["task_count"]["closed"],
             "status": rawProject["status"],
-            "progress" : str(progresCalc(rawProject["task_count"]["open"], rawProject["task_count"]["closed"])),
-            "progress_val" : progresCalc(rawProject["task_count"]["open"], rawProject["task_count"]["closed"])
+            "progress" : str(projProgress),
+            "progress_val" : projProgress
     }
     # customFieldParser(parsedProject["custom"])
     # return arrayProjectBuilder(parsedProject)
@@ -84,6 +85,10 @@ zohoDump = fetchAllProjects(projectsConfig)
 isolatedProjects = zohoDump["projects"]
 print("Parsing:", len(isolatedProjects), "projects")
 parsedProjects = parseAllProjects(isolatedProjects)
+writeDict = {
+    time = datetime.datetime.now()
+    projects = parsedProjects
+}
 
 def projList(projects):
     returnList= []

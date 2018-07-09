@@ -12,7 +12,7 @@ chartApp.config(function ($routeProvider) {
   })
   .when('/specialists', {
     templateUrl: 'views/specialists.html',
-    controller: 'specialistController'
+    controller: 'projectController'
   });
 });
 

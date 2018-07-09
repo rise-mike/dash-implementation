@@ -1,1 +1,29 @@
-<h1>Working on it</h1> 
+<div class="container-fluid">
+    <div id="top-five-panel" class="panel panel-default" >
+      <div id="panel-head" class="panel-heading">Going Live This Week</div>
+      <div class="panel-body"></div>
+      <table id="top-five-table" class="table" >
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Specialist</th>
+            <th>Exec</th>
+            <th>Progresss</th>
+            <th>Go Live Date</th>
+          </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="project in projects | orderBy:'-progress_val' | limitTo:5">
+          <!-- <th scope="row">1</tr> -->
+          <th>{{ project.name }}</th>
+          <th>{{ project.owner}}</th>
+          <th>{{ project.custom.account_executive}}</th>
+          <th>{{ project.progress}}%</th>
+          <th>{{ project.custom.go_live}}</th>
+        </tr>
+        </tbody>
+      </table>
+      </div>
+      </div>
+
+
