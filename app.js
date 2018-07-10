@@ -10,8 +10,8 @@ chartApp.config(function ($routeProvider) {
     templateUrl: 'views/all_projects.html',
     controller: "projectController"
   })
-  .when('/specialists', {
-    templateUrl: 'views/specialists.html',
+  .when('/dash', {
+    templateUrl: 'views/dash.html',
     controller: 'projectController'
   })
 });

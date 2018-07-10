@@ -28,9 +28,8 @@ font-size: 18px;
   line-height: 37px;
 }
 
-
-
 /* PANELS */
+
 .panel{
   font-family: 'Roboto', sans-serif;
   background-color: #262626;
@@ -41,28 +40,50 @@ font-size: 18px;
 .panel-heading{
   text-align: center;
   font-size: 26px;
+  padding-bottom: 0px;
+  margin: 0;
 }
 #panel-head {
   background-color: #262626;
   color: darkgray;
+  border-bottom: none;
 }
-#top-five-panel {
+.panel-title{
+  color: darkgrey;
+  font-size: 30px;
+  background: #222222;
+  width: 102.5%;
+  margin: 0px -14px;
+  line-height: 50px;
+  }
+  #top_five_panel{
+    width: 60%;
+  }
+  #top_five_panel .progress{
+    width: 95%;
+    margin-left: 5px;
+  }
+  #top_five_panel .emp {
+    width: 110px;
+  }
+  #top_five_panel .live{
+    width: 160px;
+  }
+#top_five_heading{
   width: 60%;
+  margin: 0
 }
 
-/* TABLES */
+/* ALL PROJECTS TABLE */
+
 table{
   padding-top: 100px;
-
-  /* border-radius: 20px; */
 }
-
 thead {
   margin-top: 100px;
   height: 30px;
   font-size: 20px;
-  text-align: center;
-  
+  text-align: center; 
 }
 .name_header{
   width: 400px;
@@ -76,7 +97,6 @@ thead {
 }
 .table_center{
   text-align: center;
-  /* background: peachpuff */
 }
 .progress{
   margin-top: 18px;
@@ -94,11 +114,8 @@ thead {
 .table_name{
   padding-left: 20px;
 }
-
 .table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
    background-color: #3d3c3c;
 }
 
-/* #all_proj_head{
-  background-color: 2A2A2A;
-} */
+
