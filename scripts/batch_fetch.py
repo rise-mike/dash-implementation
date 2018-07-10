@@ -85,10 +85,10 @@ zohoDump = fetchAllProjects(projectsConfig)
 isolatedProjects = zohoDump["projects"]
 print("Parsing:", len(isolatedProjects), "projects")
 parsedProjects = parseAllProjects(isolatedProjects)
-writeDict = {
-    time = datetime.datetime.now()
-    projects = parsedProjects
-}
+# writeDict = {
+#     time = datetime.datetime.now()
+#     projects = parsedProjects
+# }
 
 def projList(projects):
     returnList= []
@@ -99,5 +99,6 @@ def projList(projects):
 # writeProjectToJson(projList(parsedProjects), "../chart/list.json")
 
 writeProjectToJson(parsedProjects, "../chart/output.json")
+writeProjectToJson(isolatedProjects, "../chart/raw.json")
 
 # customFieldParser(parsedProjects)

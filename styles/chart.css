@@ -1,3 +1,9 @@
+/* BODY */
+body {
+  background-color: #191A1D;
+}
+
+/* NAVBAR */
 .navbar {
 /* background-color: #191A1D; */
 background-color: #262626;
@@ -6,102 +12,93 @@ height: 70px;
 margin-top: auto;
 font-size: 18px;
 }
-body {
-  /* background-color: #262626; */
-  background-color: #191A1D;
-
-
-}
 .rise-logo {
-height: 68px;
-padding-bottom: 20px;
+  height: 68px;
+  padding-bottom: 20px;
 }
-
-.navbar-default .navbar-nav>li>a {
-  /* color: white; */
+.navbar-brand {
+  line-height: 37px;
+  font-size: 28px;
+}
+.nav-title{
+  font-size: 35px;
+  margin-top: 13px;
 }
 .navbar-nav li a {
   line-height: 37px;
 }
 
-.nav-title{
-  font-size: 20px
-}
-
-.panel-default{
-  vertical-align: center;
-}
 
 
-.panel-text{
-  margin-top: 18px;
-}
-.progress{
-  margin-top: 18px;
-  width: 32.5%;
-  padding: 0;
-  background-color: yellow;
-}
-
-.nav-title{
-  font-size: 35px;
-  margin-top: 13px;
-}
-
+/* PANELS */
 .panel{
-  margin: 0;
-  padding: 0;
   font-family: 'Roboto', sans-serif;
   background-color: #262626;
   color: darkgrey; 
-}
-.proj_title{
-padding: 9px 0px;
-}
-.panel-body{
-  height: auto;
-  margin: 0;
-  padding: 0;
-  white-space: nowrap;
-}
-
-#chart_div { 
   border: none;
+  /* padding: 10px; */
 }
-
-.panel-footer {
-  text-align: center;
-}
-.owner{
-  border: 1px solid black;
-  border-radius: 12px;
-  width: auto;
-  display: inline-block;
-  padding: 5px;
-  font-size: 15px;
-  margin-top: 12px;
-}
-
-#top-five-panel {
-  width: 60%;
-}
-
-/* #top-five-table{
-} */
 .panel-heading{
   text-align: center;
   font-size: 26px;
 }
-
 #panel-head {
   background-color: #262626;
   color: darkgray;
 }
-
-.panel {
-  border: 0;
+#top-five-panel {
+  width: 60%;
 }
 
-.table > thead > tr > th, .table > thead > tr > td {
-  border: 0;
+/* TABLES */
+table{
+  padding-top: 100px;
+
+  /* border-radius: 20px; */
 }
+
+thead {
+  margin-top: 100px;
+  height: 30px;
+  font-size: 20px;
+  text-align: center;
+  
+}
+.name_header{
+  width: 400px;
+  text-align: center;
+  height: 50px;
+  font-weight: bold;
+}
+.field_header{
+  width: 300px;
+  text-align: center;
+}
+.table_center{
+  text-align: center;
+  /* background: peachpuff */
+}
+.progress{
+  margin-top: 18px;
+  width: 32.5%;
+  height: 20px;
+  padding: 0;
+  background-color: #ffdb58;
+}
+.progress{
+  width: 400px;
+}
+#proj-data{
+  padding-left: 20px;
+}
+.table_name{
+  padding-left: 20px;
+}
+
+.table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
+   background-color: #3d3c3c;
+}
+
+/* #all_proj_head{
+  background-color: 2A2A2A;
+} */

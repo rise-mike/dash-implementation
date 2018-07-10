@@ -4,16 +4,16 @@ chartApp.config(function ($routeProvider) {
   $routeProvider
   .when('/', {
     templateUrl: 'views/chart.html',
-    controller: 'chartController'
+    controller: 'projectController'
   })
   .when('/projects', {
-    templateUrl: 'views/projects.html',
+    templateUrl: 'views/all_projects.html',
     controller: "projectController"
   })
   .when('/specialists', {
     templateUrl: 'views/specialists.html',
     controller: 'projectController'
-  });
+  })
 });
 
 chartApp.controller('chartController', ['$scope', '$http', function($scope, $http) {
