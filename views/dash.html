@@ -1,80 +1,87 @@
 <div class="container-fluid">
   <div class="row">
-    <div class="panel-heading" id="top_five_heading">
-        <h1 class="panel-title">Next Five Go-Lives</h>
+    <div class="test col-sm-5 ">
+      <div class="panel-heading">
+        <h1 class="panel-title" id="db-panel-title">Next Five Going Live</h>
       </div>
-    <div id="top_five_panel" class="panel panel-default" >
-      
-      <table id="top_five_proj_table" class="table-dark table-striped" >
-      <!-- <table class="table" > -->
-        <thead>
-          <tr id="top_five_proj_head">
-            <th class="name_header">Org Name</th>
-            <th class="field_header">Specialist</th>
-            <th class="field_header">Account Exec.</th>
-            <th class="field_header emp">Employees</th>
-            <th class="field_header">Progresss</th>
-            <th class="field_header">Go Live Date</th>
-          </tr>
-        </thead>
-        <tbody>
-        <tr id="proj_data" ng-repeat="project in projects | orderBy:'-custom.go_live' | limitTo:5">
-          <th class="table_name">{{ project.name }}</th>
-          <th class="table_center">{{ project.owner}}</th>
-          <th class="table_center">{{ project.custom.account_executive}}</th>
-          <th class="table_center">{{ project.custom.employees }}</th>
-          <th>
-          <div class="progress">
-          <div class="progress-bar" role="progressbar" 
-            ng-style="{'width': getWidth(project)}"
-            aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">{{ project.progress }}%</div>
-          </div>
-          </th>
-        <th class="table_center live">{{ project.custom.go_live}}</th>
-      </tr>
-      </tbody>
-    </table>
+      <div id="top_five_panel" class="panel panel-default" >
+        <table id="top_five_proj_table" class="table-dark table-striped" >
+          <thead>
+            <tr id="top_five_proj_head">
+              <th class="name_header">Org Name</th>
+              <th class="field_header">Specialist</th>
+              <th class="field_header">Account Exec.</th>
+              <th class="field_header emp">Employees</th>
+              <th class="field_header">Go Live Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr id="proj_data" ng-repeat="project in projects | orderBy:'custom.go_live' | limitTo:5">
+              <th class="top_tab table_name">{{ project.name }}</th>
+              <th class="top_tab table_center">{{ project.owner}}</th>
+              <th class="top_tab table_center">{{ project.custom.account_executive}}</th>
+              <th class="top_tab table_center">{{ project.custom.employees }}</th>
+              <th class="top_tab table_center live">{{ project.custom.go_live}}</th>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      </div>
+      <!-- <div class="test col-sm-1">Tiny Boye</div> -->
+      <div class="test col-sm-5 col-md-offset-2">
 
-    <div class-"panel-heading" id="stats_panel">
+
+          <div class="panel-heading">
+              <h1 class="panel-title" id="db-panel-title">Oh look, moar stats!</h>
+            </div>
+            <div id="top_five_panel" class="panel panel-default" >
+              <table id="top_five_proj_table" class="table-dark table-striped" >
+                <thead id="stats_head">
+                  <!-- <tr id="stats_head"> -->
+                    <!-- <th class="name_header"></th>
+                    <th class="field_header"></th>
+                    <th class="field_header"></th>
+                    <th class="field_header emp"></th>
+                    <th class="field_header"></th> -->
+                  <!-- </tr> -->
+                </thead>
+                <tbody>
+                  <tr id="proj_data" ng-repeat="project in projects | orderBy:'-custom.go_live' | limitTo:5">
+                    <th class="top_tab table_name">Dummy Row</th>
+                    <th class="top_tab table_center">{{ project.owner}}</th>
+                    <th class="top_tab table_center">{{ project.custom.account_executive}}</th>
+                    <th class="top_tab table_center">{{ project.custom.employees }}</th>
+                    <th class="top_tab table_center live">{{ project.custom.go_live}}</th>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+
+      </div>
+    </div>
+    <div class="row justify-content-md-center">
+    <h1 class="test"> Specialist Cards</h1>
+    <div class="test col col-sm-2 col-md-offset-1">Specialist 1</div>
+    <div class="test col col-sm-2">Specialist 2</div>
+    <div class="test col col-sm-2">Specialist 3</div>
+    <div class="test col col-sm-2">Specialist 4</div>
+    <div class="test col col-sm-2">Specialist 5</div>
+  </div>
+
+
+
+    <!-- <div class-"panel-heading" id="stats_panel">
       <h1>Implementations Snapshot</h1>
     </div>
     <table>
       <thead>
 
       </thead>
-    </table>
-  </div>
+    </table> 
+  </div> -->
 </div>
 </div>
-
-<!-- <div class="container-fluid">
-  <div id="top-five-panel" class="panel panel-default" >
-    <div id="panel-head" class="panel-heading">Next Five Going Live</div>
-    <div class="panel-body"></div>
-      <table id="top-five-table" class="table" >
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Specialist</th>
-            <th>Exec</th>
-            <th>Employees</th>
-            <th>Progresss</th>
-            <th>Go Live Date</th>
-          </tr>
-        </thead>
-        <tbody>
-        <tr ng-repeat="project in projects | orderBy:'custom.go_live' | limitTo:5">
-          <th>{{ project.name }}</th>
-          <th>{{ project.owner}}</th>
-          <th>{{ project.custom.account_executive }}</th>
-          <th>{{ project.custom.employees }}</th>
-          <th>{{ project.progress}}%</th>
-          <th>{{ project.custom.go_live}}</th>
-        </tr>
-        </tbody>
-      </table>
-  </div>
-</div> -->
 
 
 

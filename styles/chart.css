@@ -40,39 +40,23 @@ font-size: 18px;
 .panel-heading{
   text-align: center;
   font-size: 26px;
-  padding-bottom: 0px;
-  margin: 0;
-}
-#panel-head {
-  background-color: #262626;
-  color: darkgray;
-  border-bottom: none;
+  /* padding-bottom: 0px;
+  margin: 0; */
 }
 .panel-title{
   color: darkgrey;
   font-size: 30px;
   background: #222222;
-  width: 102.5%;
   margin: 0px -14px;
   line-height: 50px;
   }
-  #top_five_panel{
-    width: 60%;
-  }
-  #top_five_panel .progress{
-    width: 95%;
-    margin-left: 5px;
-  }
+/*  
   #top_five_panel .emp {
     width: 110px;
   }
   #top_five_panel .live{
     width: 160px;
-  }
-#top_five_heading{
-  width: 60%;
-  margin: 0
-}
+  } */
 
 /* ALL PROJECTS TABLE */
 
@@ -111,11 +95,28 @@ thead {
 #proj-data{
   padding-left: 20px;
 }
+.top_tab {
+  height: 50px;
+}
 .table_name{
   padding-left: 20px;
+  height: 30px;
 }
 .table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
    background-color: #3d3c3c;
 }
 
-
+/* TESTING PURPOSES ONLY */
+.test{
+ border: 1px solid white;
+}
+h1{
+  text-align: center:
+}
+#stats_head {
+  height: 0px;
+}
+#db-panel-title{
+  font-size: 18px;
+  height: 30px;
+}
