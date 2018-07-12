@@ -19,15 +19,15 @@ def parseAllProjects(rawProjects):
     
 def singleProjectBuilder(rawProject):
     # Takes a single "rawProject" Zoho Project JSON object, returns a parsed object, "parsedProject"
-    projProgress = progresCalc(rawProject["milestone_count"]["open"], rawProject["milestone_count"]["closed"])
+    projProgress = progresCalc(rawProject["task_count"]["open"], rawProject["task_count"]["closed"])
     parsedProject = {
             "name": rawProject["name"],  
             "projectId": rawProject["id"],
             "owner": rawProject["owner_name"],
             "startDate": rawProject["start_date"],
             "custom": customIsolateSingle(rawProject["custom_fields"]),
-            "milestones_open": rawProject["milestone_count"]["open"],
-            "milestones_closed": rawProject["milestone_count"]["closed"],
+            "tasks_open": rawProject["task_count"]["open"],
+            "tasks_closed": rawProject["task_count"]["closed"],
             "status": rawProject["status"],
             "progress" : str(projProgress),
             "progress_val" : projProgress
