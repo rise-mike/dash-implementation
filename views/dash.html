@@ -1,12 +1,12 @@
 <div class="container-fluid">
   <div class="row">
-    <div class="test col-sm-5 ">
+    <div class="col-sm-5 ">
       <div class="panel-heading">
         <h1 class="panel-title" id="db-panel-title">Next Five Going Live</h>
       </div>
       <div id="top_five_panel" class="panel panel-default" >
         <table id="top_five_proj_table" class="table-dark table-striped" >
-          <thead>
+          <!-- <thead>
             <tr id="top_five_proj_head">
               <th class="name_header">Org Name</th>
               <th class="field_header">Specialist</th>
@@ -14,7 +14,7 @@
               <th class="field_header emp">Employees</th>
               <th class="field_header">Go Live Date</th>
             </tr>
-          </thead>
+          </thead> -->
           <tbody>
             <tr id="proj_data" ng-repeat="project in projects | orderBy:'custom.go_live' | limitTo:5">
               <th class="top_tab table_name">{{ project.name }}</th>
@@ -28,11 +28,9 @@
       </div>
       </div>
       <!-- <div class="test col-sm-1">Tiny Boye</div> -->
-      <div class="test col-sm-5 col-md-offset-2">
-
-
+      <div class="col-sm-5 ">
           <div class="panel-heading">
-              <h1 class="panel-title" id="db-panel-title">Oh look, moar stats!</h>
+              <h1 class="panel-title" id="db-panel-title">Team Stats</h>
             </div>
             <div id="top_five_panel" class="panel panel-default" >
               <table id="top_five_proj_table" class="table-dark table-striped" >
@@ -61,12 +59,52 @@
       </div>
     </div>
     <div class="row justify-content-md-center">
-    <h1 class="test"> Specialist Cards</h1>
-    <div class="test col col-sm-2 col-md-offset-1">Specialist 1</div>
-    <div class="test col col-sm-2">Specialist 2</div>
-    <div class="test col col-sm-2">Specialist 3</div>
-    <div class="test col col-sm-2">Specialist 4</div>
-    <div class="test col col-sm-2">Specialist 5</div>
+    <h1 class="problem"> Specialists</h1>
+    <div class="test col col-sm-2 col-md-offset-1 spec-card">
+      <h3>Specialist 1</h3>
+        <img class="headshot" src="../assets/batman.jpg">
+        <p class="stat-title" id="spec-stat">Imp. in Progress:</p>
+        <p class="stat-title" id="spec-stat">Imp. on Hold:</p>
+        <p class="stat-title" id="spec-stat">Average Imp. Completion:</p>
+        <p class="stat-title" id="spec-stat">Overall Imp. Completion:</p>
+        <p class="stat-title" id="spec-stat">Next Go-live:</p>
+    </div>
+    <div class="test col col-sm-2 spec-card">
+      <h3>Specialist 2</h3>
+        <img class="headshot" src="../assets/batman.jpg">
+        <p class="stat-title" id="spec-stat">Imp. in Progress:</p>
+        <p class="stat-title" id="spec-stat">Imp. on Hold:</p>
+        <p class="stat-title" id="spec-stat">Average Imp. Completion:</p>
+        <p class="stat-title" id="spec-stat">Overall Imp. Completion:</p>
+        <p class="stat-title" id="spec-stat">Next Go-live:</p>
+    </div>
+    <div class="test col col-sm-2 spec-card">
+        <h3>Specialist 3</h3>
+        <img class="headshot" src="../assets/batman.jpg">
+        <p class="stat-title" id="spec-stat">Imp. in Progress:</p>
+        <p class="stat-title" id="spec-stat">Imp. on Hold:</p>
+        <p class="stat-title" id="spec-stat">Average Imp. Completion:</p>
+        <p class="stat-title" id="spec-stat">Overall Imp. Completion:</p>
+        <p class="stat-title" id="spec-stat">Next Go-live:</p>
+    </div>
+    <div class="test col col-sm-2 spec-card">
+        <h3>Specialist 4</h3>
+        <img class="headshot" src="../assets/batman.jpg">
+        <p class="stat-title" id="spec-stat">Imp. in Progress:</p>
+        <p class="stat-title" id="spec-stat">Imp. on Hold:</p>
+        <p class="stat-title" id="spec-stat">Average Imp. Completion:</p>
+        <p class="stat-title" id="spec-stat">Overall Imp. Completion:</p>
+        <p class="stat-title" id="spec-stat">Next Go-live:</p>
+    </div>
+    <div class="test col col-sm-2 spec-card">
+      <h3>Specialist 5</h3>
+        <img class="headshot" src="../assets/batman.jpg">
+        <p class="stat-title" id="spec-stat">Imp. in Progress:</p>
+        <p class="stat-title" id="spec-stat">Imp. on Hold:</p>
+        <p class="stat-title" id="spec-stat">Average Imp. Completion:</p>
+        <p class="stat-title" id="spec-stat">Overall Imp. Completion:</p>
+        <p class="stat-title" id="spec-stat">Next Go-live:</p>
+    </div>
   </div>
 
 

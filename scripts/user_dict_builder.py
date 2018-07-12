@@ -11,16 +11,13 @@ def parseUsers(projects):
     users_dict = {}
     for project in projects:
         current_owner = project["owner"]
-
+        
         if current_owner not in users_dict.keys():
             users_dict[current_owner] = {"project_count" : 1}
         else:
             users_dict[current_owner]["project_count"] += 1
-    
-        users_dict[current_owner][project["name"]] = project
-        print("THE PROJECT", project)
 
-    print("\nUSERS DICT", users_dict)
+        users_dict[current_owner][project["name"]] = project
 
     return users_dict
 

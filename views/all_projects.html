@@ -13,7 +13,7 @@
           </tr>
         </thead>
         <tbody>
-        <tr id="proj_data" ng-repeat="project in projects | orderBy:'-progress_val'">
+        <tr id="proj_data" ng-repeat="project in projects | orderBy:'custom.go_live'">
           <th class="table_name">{{ project.name }}</th>
           <th class="table_center">{{ project.owner}}</th>
           <th class="table_center">{{ project.custom.account_executive}}</th>

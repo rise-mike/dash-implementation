@@ -3,6 +3,14 @@ var chartApp = angular.module('chartApp', ['ngRoute']);
 chartApp.config(function ($routeProvider) {
   $routeProvider
   .when('/', {
+    templateUrl: 'views/dash.html',
+    controller: 'projectController'
+  })
+  .when('/dash', {
+    templateUrl: 'views/dash.html',
+    controller: 'projectController'
+  })
+  .when('/chart', {
     templateUrl: 'views/chart.html',
     controller: 'projectController'
   })
@@ -10,9 +18,9 @@ chartApp.config(function ($routeProvider) {
     templateUrl: 'views/all_projects.html',
     controller: "projectController"
   })
-  .when('/dash', {
-    templateUrl: 'views/dash.html',
-    controller: 'projectController'
+  .when('/report', {
+    templateUrl: 'views/report.html',
+    controller: "projectController"
   })
 });
 
