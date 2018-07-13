@@ -1,11 +1,13 @@
 <div class="container-fluid">
   <div class="row">
-    <div class="col-sm-5 ">
+    <div class="col-sm-8 ">
       <div class="panel-heading">
         <h1 class="panel-title" id="db-panel-title">Next Five Going Live</h>
       </div>
-      <div id="top_five_panel" class="panel panel-default" >
-        <table id="top_five_proj_table" class="table-dark table-striped" >
+      <div class="panel panel-default" >
+        <table class="table-dark table-striped" >
+          
+          
           <!-- <thead>
             <tr id="top_five_proj_head">
               <th class="name_header">Org Name</th>
@@ -15,25 +17,27 @@
               <th class="field_header">Go Live Date</th>
             </tr>
           </thead> -->
+
+          
           <tbody>
             <tr id="proj_data" ng-repeat="project in projects | orderBy:'custom.go_live' | limitTo:5">
               <th class="top_tab table_name">{{ project.name }}</th>
-              <th class="top_tab table_center">{{ project.owner}}</th>
-              <th class="top_tab table_center">{{ project.custom.account_executive}}</th>
-              <th class="top_tab table_center">{{ project.custom.employees }}</th>
-              <th class="top_tab table_center live">{{ project.custom.go_live}}</th>
+              <th class="top_tab table-center">{{ project.owner}}</th>
+              <th class="top_tab table-center">{{ project.custom.account_executive}}</th>
+              <th class="top_tab table-center">{{ project.custom.employees }}</th>
+              <th class="top_tab table-center live">{{ project.custom.go_live}}</th>
             </tr>
           </tbody>
         </table>
       </div>
       </div>
       <!-- <div class="test col-sm-1">Tiny Boye</div> -->
-      <div class="col-sm-5 ">
+      <div class="col-sm-4 ">
           <div class="panel-heading">
               <h1 class="panel-title" id="db-panel-title">Team Stats</h>
             </div>
-            <div id="top_five_panel" class="panel panel-default" >
-              <table id="top_five_proj_table" class="table-dark table-striped" >
+            <div class="panel panel-default" >
+              <table id="top_five_proj_table stat-table" class="table-dark table-striped" >
                 <thead id="stats_head">
                   <!-- <tr id="stats_head"> -->
                     <!-- <th class="name_header"></th>
@@ -45,11 +49,11 @@
                 </thead>
                 <tbody>
                   <tr id="proj_data" ng-repeat="project in projects | orderBy:'-custom.go_live' | limitTo:5">
-                    <th class="top_tab table_name">Dummy Row</th>
-                    <th class="top_tab table_center">{{ project.owner}}</th>
-                    <th class="top_tab table_center">{{ project.custom.account_executive}}</th>
-                    <th class="top_tab table_center">{{ project.custom.employees }}</th>
-                    <th class="top_tab table_center live">{{ project.custom.go_live}}</th>
+                    <th class="top_tab table_name" id="stat-name">Dummy Row</th>
+                    <th class="top_tab table_center-s">{{ project.owner}}</th>
+                    <th class="top_tab table_center-s">{{ project.custom.account_executive}}</th>
+                    <th class="top_tab table_center-s">{{ project.custom.employees }}</th>
+                    <th class="top_tab table_center-s">{{ project.custom.go_live}}</th>
                   </tr>
                 </tbody>
               </table>
@@ -60,7 +64,10 @@
     </div>
     <div class="row justify-content-md-center">
     <h1 class="problem"> Specialists</h1>
-    <div class="test col col-sm-2 col-md-offset-1 spec-card">
+
+    <!-- TURN THIS INTO NG-REPEAT -->
+
+    <div class="test col col-sm-2 spec-card"> <!-- col-md-offset-1 -->
       <h3>Specialist 1</h3>
         <img class="headshot" src="../assets/batman.jpg">
         <p class="stat-title" id="spec-stat">Imp. in Progress:</p>
@@ -69,6 +76,9 @@
         <p class="stat-title" id="spec-stat">Overall Imp. Completion:</p>
         <p class="stat-title" id="spec-stat">Next Go-live:</p>
     </div>
+
+    <!-- DELETE START HERE! Can delete once ng-repeat is built -->
+
     <div class="test col col-sm-2 spec-card">
       <h3>Specialist 2</h3>
         <img class="headshot" src="../assets/batman.jpg">
@@ -105,19 +115,12 @@
         <p class="stat-title" id="spec-stat">Overall Imp. Completion:</p>
         <p class="stat-title" id="spec-stat">Next Go-live:</p>
     </div>
-  </div>
+
+    <!-- STOP DELETING HERE YO -->
 
 
+  </div> <!-- Don't Delete this-->
 
-    <!-- <div class-"panel-heading" id="stats_panel">
-      <h1>Implementations Snapshot</h1>
-    </div>
-    <table>
-      <thead>
-
-      </thead>
-    </table> 
-  </div> -->
 </div>
 </div>
 

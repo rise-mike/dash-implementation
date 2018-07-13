@@ -35,7 +35,6 @@ margin-bottom: 0px;
   background-color: #262626;
   color: darkgrey; 
   border: none;
-  /* padding: 10px; */
 }
 .panel-heading{
   text-align: center;
@@ -48,7 +47,7 @@ margin-bottom: 0px;
   font-size: 30px;
   background: #222222;
   margin: 0px -14px;
-  line-height: 50px;
+  line-height: 40px;
   }
 /*  
 
@@ -73,9 +72,7 @@ thead {
   width: 300px;
   text-align: center;
 }
-.table_center{
-  text-align: center;
-}
+
 .progress{
   margin-top: 18px;
   width: 32.5%;
@@ -88,52 +85,57 @@ thead {
 }
 #proj-data{
   padding-left: 20px;
+  width: 400px;
 }
 .top_tab {
-  height: 50px;
+  height: 30px;
 }
 .table_name{
   padding-left: 20px;
-  height: 30px;
+  padding-right: 5px;
+  width: 400px;
 }
+
+#stat-name{
+  width: 200px;
+}
+
+.table-center{
+  text-align: center;
+  width: 210px;
+}
+.table-center-s {
+  width: 150px;
+}
+.stat-table{
+  width: 605px;
+}
+
 .table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
    background-color: #3d3c3c;
 }
 
-/* TESTING PURPOSES ONLY */
-
-h1{
-  text-align: center:
-}
 #stats_head {
   height: 0px;
 }
 #db-panel-title{
   font-size: 18px;
-  height: 50px;
+  height: 40px;
+  vertical-align: middle;
 }
 .problem{
   color: darkgray;
   text-align: center;
 }
 .spec-card{
-  /* border: 1px solid white; */
   text-align: center;
   color: darkgrey;
   height: 300px;
   background: #262626;
   margin-right: 10px;
-  /* margin-left: 10px; */
-  
 }
 .headshot{
   height: 65px;
   border-radius: 50%;
   margin-bottom: 20px;
-}
-.stat-title{
-  text-align: left;
-}
-.stat-stat{ 
-  text-align: right;
 }
