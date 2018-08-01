@@ -8,12 +8,12 @@ chartApp.config(function ($routeProvider) {
   })
   .when('/dash', {
     templateUrl: 'views/dash.html',
-    controller: 'projectController'
+    controller: 'dashController'
   })
-  .when('/chart', {
-    templateUrl: 'views/chart.html',
-    controller: 'projectController'
-  })
+  // .when('/chart', {
+  //   templateUrl: 'views/chart.html',
+  //   controller: 'chartController'
+  // })
   .when('/projects', {
     templateUrl: 'views/all_projects.html',
     controller: "projectController"
@@ -24,7 +24,7 @@ chartApp.config(function ($routeProvider) {
   })
 });
 
-chartApp.controller('chartController', ['$scope', '$http', function($scope, $http) {
+// chartApp.controller('chartController', ['$scope', '$http', function($scope, $http) {
 
 //   $scope.chartData = {}
 
@@ -34,13 +34,14 @@ chartApp.controller('chartController', ['$scope', '$http', function($scope, $htt
 //   })
 // console.log("On the scope ", $scope.chartData)
 
-}])
+// }])
 
-chartApp.controller('projectController', ['$scope', '$http', function($scope, $http) {
+chartApp.controller('dashController', ['$scope', '$http', function($scope, $http) {
 
   $scope.projects = []
+  $scope.specialists = ['ariel.png', 'bhuvi.png', 'dhiraj.png', 'ed.png', 'maulin.png']
   
-  $http.get('chart/output.json').success(function(response) {
+  $http.get('data/projects.json').success(function(response) {
     $scope.projects = response
   })
 
@@ -49,8 +50,20 @@ chartApp.controller('projectController', ['$scope', '$http', function($scope, $h
     return elementVal
   }
 
+
 }])
 
-chartApp.controller('specialistController', ['$scope', '$http', function($scope, $http) {
+chartApp.controller('projectController', ['$scope', '$http', function($scope, $http) {
+
+  $scope.projects = []
+  
+  $http.get('data/projects.json').success(function(response) {
+    $scope.projects = response
+  })
+
+  $scope.getWidth = function(project){
+    elementVal = String(project.progress) + "%"
+    return elementVal
+  }
 
 }])

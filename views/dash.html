@@ -38,23 +38,28 @@
             </div>
             <div class="panel panel-default" >
               <table id="top_five_proj_table stat-table" class="table-dark table-striped" >
-                <thead id="stats_head">
-                  <!-- <tr id="stats_head"> -->
-                    <!-- <th class="name_header"></th>
-                    <th class="field_header"></th>
-                    <th class="field_header"></th>
-                    <th class="field_header emp"></th>
-                    <th class="field_header"></th> -->
-                  <!-- </tr> -->
-                </thead>
                 <tbody>
-                  <tr id="proj_data" ng-repeat="project in projects | orderBy:'-custom.go_live' | limitTo:5">
-                    <th class="top_tab table_name" id="stat-name">Dummy Row</th>
-                    <th class="top_tab table_center-s">{{ project.owner}}</th>
-                    <th class="top_tab table_center-s">{{ project.custom.account_executive}}</th>
-                    <th class="top_tab table_center-s">{{ project.custom.employees }}</th>
-                    <th class="top_tab table_center-s">{{ project.custom.go_live}}</th>
+                  <tr id="proj_data">
+                    <th class="top_tab table_name" id="stat-name">Implementations in Progress:</th>
+                    <th class="top_tab table_center_s">Data </th>
+
                   </tr>
+                  <tr id="proj_data">
+                    <th class="top_tab table_name" id="stat-name">MRR in Progress:</th>
+                    <th class="top_tab table_center_s">Data </th>
+                  </tr>
+                  <tr id="proj_data">
+                      <th class="top_tab table_name" id="stat-name">Avg. Weeks to Start:</th>
+                      <th class="top_tab table_center_s">Data </th>
+                    </tr>
+                    <tr id="proj_data">
+                      <th class="top_tab table_name" id="stat-name">Avg. Project Completion:</th>
+                      <th class="top_tab table_center_s">Data </th>
+                    </tr>
+                    <tr id="proj_data">
+                      <th class="top_tab table_name" id="stat-name">Overall Project Completion</th>
+                      <th class="top_tab table_center_s">Data </th>
+                    </tr>
                 </tbody>
               </table>
             </div>
@@ -67,53 +72,53 @@
 
     <!-- TURN THIS INTO NG-REPEAT -->
 
-    <div class="test col col-sm-2 spec-card"> <!-- col-md-offset-1 -->
-      <h3>Specialist 1</h3>
-        <img class="headshot" src="../assets/batman.jpg">
+    <div class="first_col col col-sm-2 spec-card "> <!-- col-md-offset-1 -->
+      <h3>Maulin<img class="headshot" src="../assets/batman.jpg"></h3>
         <p class="stat-title" id="spec-stat">Imp. in Progress:</p>
-        <p class="stat-title" id="spec-stat">Imp. on Hold:</p>
-        <p class="stat-title" id="spec-stat">Average Imp. Completion:</p>
-        <p class="stat-title" id="spec-stat">Overall Imp. Completion:</p>
+        <p class="stat-title" id="spec-stat">MRR in Progress:</p>
+        <p class="stat-title" id="spec-stat">Avg. Weeks to Start:</p>
+        <p class="stat-title" id="spec-stat">Avg. Project Completion:</p>
+        <p class="stat-title" id="spec-stat">Overall Project Completion:</p>
         <p class="stat-title" id="spec-stat">Next Go-live:</p>
     </div>
 
     <!-- DELETE START HERE! Can delete once ng-repeat is built -->
 
-    <div class="test col col-sm-2 spec-card">
-      <h3>Specialist 2</h3>
-        <img class="headshot" src="../assets/batman.jpg">
+    <div class="col col-sm-2 spec-card">
+      <h3>Ed<img class="headshot" src="../assets/batman.jpg"></h3>
+      <p class="stat-title" id="spec-stat">Imp. in Progress:</p>
+      <p class="stat-title" id="spec-stat">MRR in Progress:</p>
+      <p class="stat-title" id="spec-stat">Avg. Weeks to Start:</p>
+      <p class="stat-title" id="spec-stat">Avg. Project Completion:</p>
+      <p class="stat-title" id="spec-stat">Overall Project Completion:</p>
+      <p class="stat-title" id="spec-stat">Next Go-live:</p>
+    </div>
+    <div class="col col-sm-2 spec-card">
+        <h3>Bhuvi<img class="headshot" src="../assets/batman.jpg"></h3>
         <p class="stat-title" id="spec-stat">Imp. in Progress:</p>
-        <p class="stat-title" id="spec-stat">Imp. on Hold:</p>
-        <p class="stat-title" id="spec-stat">Average Imp. Completion:</p>
-        <p class="stat-title" id="spec-stat">Overall Imp. Completion:</p>
+        <p class="stat-title" id="spec-stat">MRR in Progress:</p>
+        <p class="stat-title" id="spec-stat">Avg. Weeks to Start:</p>
+        <p class="stat-title" id="spec-stat">Avg. Project Completion:</p>
+        <p class="stat-title" id="spec-stat">Overall Project Completion:</p>
         <p class="stat-title" id="spec-stat">Next Go-live:</p>
     </div>
-    <div class="test col col-sm-2 spec-card">
-        <h3>Specialist 3</h3>
-        <img class="headshot" src="../assets/batman.jpg">
+    <div class="col col-sm-2 spec-card">
+        <h3>Dhiraj<img class="headshot" src="../assets/batman.jpg"></h3>
         <p class="stat-title" id="spec-stat">Imp. in Progress:</p>
-        <p class="stat-title" id="spec-stat">Imp. on Hold:</p>
-        <p class="stat-title" id="spec-stat">Average Imp. Completion:</p>
-        <p class="stat-title" id="spec-stat">Overall Imp. Completion:</p>
+        <p class="stat-title" id="spec-stat">MRR in Progress:</p>
+        <p class="stat-title" id="spec-stat">Avg. Weeks to Start:</p>
+        <p class="stat-title" id="spec-stat">Avg. Project Completion:</p>
+        <p class="stat-title" id="spec-stat">Overall Project Completion:</p>
         <p class="stat-title" id="spec-stat">Next Go-live:</p>
     </div>
-    <div class="test col col-sm-2 spec-card">
-        <h3>Specialist 4</h3>
-        <img class="headshot" src="../assets/batman.jpg">
-        <p class="stat-title" id="spec-stat">Imp. in Progress:</p>
-        <p class="stat-title" id="spec-stat">Imp. on Hold:</p>
-        <p class="stat-title" id="spec-stat">Average Imp. Completion:</p>
-        <p class="stat-title" id="spec-stat">Overall Imp. Completion:</p>
-        <p class="stat-title" id="spec-stat">Next Go-live:</p>
-    </div>
-    <div class="test col col-sm-2 spec-card">
-      <h3>Specialist 5</h3>
-        <img class="headshot" src="../assets/batman.jpg">
-        <p class="stat-title" id="spec-stat">Imp. in Progress:</p>
-        <p class="stat-title" id="spec-stat">Imp. on Hold:</p>
-        <p class="stat-title" id="spec-stat">Average Imp. Completion:</p>
-        <p class="stat-title" id="spec-stat">Overall Imp. Completion:</p>
-        <p class="stat-title" id="spec-stat">Next Go-live:</p>
+    <div class="col col-sm-2 spec-card">
+      <h3>Specialist 5<img class="headshot" src="../assets/batman.jpg"></h3>
+      <p class="stat-title" id="spec-stat">Imp. in Progress:</p>
+      <p class="stat-title" id="spec-stat">MRR in Progress:</p>
+      <p class="stat-title" id="spec-stat">Avg. Weeks to Start:</p>
+      <p class="stat-title" id="spec-stat">Avg. Project Completion:</p>
+      <p class="stat-title" id="spec-stat">Overall Project Completion:</p>
+      <p class="stat-title" id="spec-stat">Next Go-live:</p>
     </div>
 
     <!-- STOP DELETING HERE YO -->

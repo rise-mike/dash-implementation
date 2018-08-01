@@ -97,18 +97,19 @@ thead {
 }
 
 #stat-name{
-  width: 200px;
+  width: 300px;
 }
 
 .table-center{
   text-align: center;
-  width: 210px;
-}
-.table-center-s {
   width: 150px;
 }
+.table_center_s {
+  width:310px;
+  text-align: right;
+}
 .stat-table{
-  width: 605px;
+  width:605px;
 }
 
 .table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
@@ -118,6 +119,7 @@ thead {
 #stats_head {
   height: 0px;
 }
+
 #db-panel-title{
   font-size: 18px;
   height: 40px;
@@ -126,16 +128,30 @@ thead {
 .problem{
   color: darkgray;
   text-align: center;
+  margin-top: 5px;
+  font-size: 20px;
 }
 .spec-card{
   text-align: center;
   color: darkgrey;
-  height: 300px;
+  height: 250px;
   background: #262626;
   margin-right: 10px;
 }
 .headshot{
-  height: 65px;
+  height: 55px;
   border-radius: 50%;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+}
+.first_col{
+  margin-left: 90px;
+}
+.stat-title{
+  text-align: left;
+}
+h3{
+  margin-top: 5px;
+  height: 50px;
+  font-size: 18px;
 }
