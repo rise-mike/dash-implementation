@@ -1,102 +1,87 @@
 import json
+import datetime
 # from fetch_projects import writeProjectToJson
 
 # OPEN THE PARSED ZOHO PROJECTS FILE
-
-with open("../chart/output.json") as f:
+with open("../data/projects.json") as f:
     json_projects = json.load(f)
 
-allParsedProjects = []
-# print(json_projects[0])
+# Calculate weeks to start
+def formatDate(dateList):
+  # Returns a list of ints representing a date in the format [YYYY, MM, DD], with leading zeros removed
+  noZero = []
+  for date in dateList.split('-'):
+    if date[0] != "0":
+      noZero.append(int(date))
+    else:
+      noZero.append(int(date[1]))
+  noZero.reverse()
+  return noZero
+
+# Datetime needs three ints to represent a date
+def makeDateTime(dateList):
+  day = dateList[1]
+  month = dateList[2]
+  year = dateList[0]
+  dateTimeObj = datetime.date(year, month, day)
+  return dateTimeObj
+
+def timeBtweenWeeks(startWk, endWk):
+  # Takes in a "start" date and a "go_live" date, and returns the weeks between them
+  start = makeDateTime(formatDate(startWk))
+  end = makeDateTime(formatDate(endWk))
+  diff = (end - start).days
+  weeks = round(diff / 7)
+  return weeks
+
 
 def parseAllProjects(allProjects):
+    allParsedProjects = []
     for project in allProjects:
-        parseProj(project)
-
+        allParsedProjects.append(parseProj(project))
+    return allParsedProjects
 
 def parseProj(project):
-    print("GO LIVE: ", project["custom"]["go_live"])
     tempProj = {
         'specialist': project['owner'],
         'client': project['name'],
-        
-        # PLACEHOLDERS, THESE WILL NEED TO BE DELETED
         'mrr': 107,
-        'weeksToStart': 9,
-
-        # THESE NEED TO BE UNCOMMENTED ONCE THE FIELDS ARE ACTIVE
-        # 'mrr': project['custom']['mrr'],
-        # 'weeksToStart': project['custom']['']   THIS NEEDS DATE PARSING "startDate - go_live"
-        
+        # 'mrr': project['custom']['mrr'],                                      UNCOMMENT ONCE DATA IS ENTERED
         'completionPctg': project['progress'],
-        'goLive': project["custom"]["go_live"]
+        'goLive': '08-30-2018',                                                # CHANGE TO DICT VALUES ONCE DATA IS ENTERED 
+        'weeksToStart': timeBtweenWeeks(project['startDate'], '08-30-2018')    # CHANGE TO DICT GO_LIVE DATE ONCE DATA IS ENTERED 
     }
-    allParsedProjects.append(tempProj)
-    # print("Number of Projects: ", len(allParsedProjects), "\n Current Proj: ", tempProj['client'])
+    return tempProj
+
+def perSpecialist(projects):
+    specialists = {}
+
+    for project in projects:
+        name = project['specialist']
+
+        if project['specialist'] in specialists.keys():
+            tempName = project['specialist']
+            specialists[tempName]['projects'] += 1
+            specialists[tempName]['mrr'] += project['mrr']
+            specialists[tempName]['wksToStart'].append(project['weeksToStart'])
+            specialists[tempName]['completion'].append(project['completionPctg'])
+            specialists[tempName]['goLive'].append(makeDateTime(formatDate(project['goLive'])))
+        else:
+            specialists[name] = {
+                'projects' : 1,
+                'mrr' : int(project['mrr']),
+                'wksToStart' : [project['weeksToStart']],
+                'completion' : [project['completionPctg']],
+                'goLive' : [makeDateTime(formatDate(project['goLive']))]
+            }
+
+    print('Specialists: ', specialists)
 
 
-parseAllProjects(json_projects)
-
-print(allParsedProjects)
-
-# CREATE DICT OF USERS "USER_NAME: DICT_OF_USER'S_PROJECTS"
-
-# Create a function that takes a dict of all parsed projects, and returns an array with one dict for each
-# implementation specialist.
-
-# A function that takes in a project dict and returns
-# name
-# specialist
-# mrr
-# weeksToStart
-# completionPctg
-# goLive
-
-# A function that takes an array of parsed dict, combines them based on specialist name
-
-
-# Create a function that takes an individual project dict, 
-
-# def parseUsers(projects): 
-#     users_dict = []
-#     for project in projects:
-
-#         users_dict.append()
-
-#         print("PROJECT: ", project, "\n")
-
-#         current_owner = project["owner"]
-        
-#         if current_owner not in users_dict.keys():
-#             users_dict[current_owner] = {"project_count" : 1}
-#             users_dict[]
-#         else:
-#             users_dict[current_owner]["project_count"] += 1
-
-#         users_dict[current_owner][project["name"]] = project
-#     return users_dict
-
-# def combineProjects(userDict):
-#     # print('USER DICT ', userDict)
-#     parsedList = []
-#     for aUser in userDict:
-#         for 
-#         tempDict = {
-#             'name' : aUser,
-#         }
-#         # print(aUser['project_count'])
-    
-
-    # This needs to add a dict that contains...
-    # MRR in progress (loop through and sum)
-    # AVG weeks to start - need to calculate them, and take an average
-    # AVG completion % - need to calculate completion for each project, take an overall avg
-    # AVG completion of all work - weighted avg?
-    # Next go-live date - using MIN?
+    for each in specialists:
+        temp = each['projects']
 
 
 
-
-# proj_by_user = parseUsers(json_projects)
-# combineProjects(proj_by_user)
-# writeProjectToJson(proj_by_user, "../data/proj_by_user.json")
+parsedProjDict = parseAllProjects(json_projects)
+perSpecialist(parsedProjDict)
