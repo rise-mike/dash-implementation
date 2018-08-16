@@ -74,14 +74,16 @@ def perSpecialist(projects):
                 'completion' : [project['completionPctg']],
                 'goLive' : [makeDateTime(formatDate(project['goLive']))]
             }
-
-    print('Specialists: ', specialists)
-
-
-    for each in specialists:
-        temp = each['projects']
+    
+    return specialists
 
 
+def combineProjects(perSpec):
+    print(perSpec)
+    for aspec in perSpec:
+        print(perSpec[aspec]['mrr'] / perSpec[aspec]['projects'])
+    
 
 parsedProjDict = parseAllProjects(json_projects)
-perSpecialist(parsedProjDict)
+projectsPerSpec = perSpecialist(parsedProjDict)
+combineProjects(projectsPerSpec)
